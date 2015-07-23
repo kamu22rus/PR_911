@@ -26,6 +26,7 @@ import android.support.v4.content.Loader;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 
 
@@ -124,10 +125,20 @@ public class SecondActivity extends ActionBarActivity implements  LoaderCallback
         menu.add(0, CM_DELETE_ID, 0, R.string.delete_record);
     }
 
-    public void onButtonClickClear(View view) {
-              // удаляем запись в БД
-            db.delRec();
-        getSupportLoaderManager().getLoader(0).forceLoad();
+
+
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == CM_DELETE_ID) {
+            // получаем из пункта контекстного меню данные по пункту списка
+            AdapterContextMenuInfo acmi = (AdapterContextMenuInfo) item
+                    .getMenuInfo();
+            // извлекаем id записи и удаляем соответствующую запись в БД
+            db.delRec(acmi.id);
+            // получаем новый курсор с данными
+            getSupportLoaderManager().getLoader(0).forceLoad();
+            return true;
+        }
+        return super.onContextItemSelected(item);
     }
 
     protected void onDestroy() {
