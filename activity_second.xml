@@ -114,15 +114,7 @@
         android:text="@string/add"
         android:layout_below="@+id/spinner">
     </Button>
-    <Button
-        android:id="@+id/btnClear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:onClick="onButtonClickClear"
-        android:text="Clear"
-        android:layout_below="@+id/addp">
-    </Button>
+
         <ListView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -134,7 +126,7 @@
             android:scrollbars = "vertical"
             android:padding="5dp"
             android:fillViewport="false"
-            android:layout_below="@+id/btnClear"
+            android:layout_below="@+id/addp"
             android:id="@+id/lvMain" />
 
 
