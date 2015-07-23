@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PR_911</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Setting</string>
+    <string name="opt"><b>...</b></string>
+    <string name="help">help</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_second">GPS</string>
+    <string name="ex_way">\n
+        Путевой лист №534\n
+        12.07.2015\n
+        Иванов Иван Иванович\n
+        М 763 ТА 22\n</string>
+    <string name="exit">Выход</string>
+    <string name="next">Далее</string>
+    <string name="server">Последная синхронизация: 5 мин назад</string>
+    <string name="title_activity_setting">Setting</string>
+
+    <string name="provider_gps">GPS</string>
+    <string name="provider_network">Network</string>
+    <string name="location_settings">Location settings</string>
+
+    <string name="add">добавить</string>
+
+
+    <string name="add_record">Добавить запись</string>
+    <string name="delete_record">Удалить запись</string>
+
+</resources>
