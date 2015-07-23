@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffcbd1ee">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonFinish"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:onClick="onClickFinish"
+            android:text="@string/exit"
+            android:textSize="15sp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:background="#2B587A"
+            android:layout_weight="3"
+            android:layout_gravity="bottom"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:onClick="onClickNext"
+            android:text="Далее"
+            android:textSize="15sp"
+            android:layout_above="@+id/buttonFinish"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:background="#2B587A"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:textColor="#ffffffff" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/SView"
+        android:background="#fffefffd"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="15sp"
+        android:scrollbars = "vertical"
+        android:padding="5dp"
+        android:fillViewport="false">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="Синхронизация"
+                android:textSize="20dp"
+                android:id="@+id/button"
+                android:layout_alignTop="@+id/SView"
+                android:layout_alignLeft="@+id/SView"
+                android:layout_alignStart="@+id/SView"
+                android:layout_alignRight="@+id/SView"
+                android:layout_alignEnd="@+id/SView"
+                android:background="#2B587A"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:id="@+id/TView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server"
+                android:textSize="15sp"
+                android:layout_below="@+id/button"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ff000000" />
+
+            <TextView
+                android:id="@+id/TView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ex_way"
+                android:textSize="20sp"
+                android:layout_alignBottom="@+id/SView"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
