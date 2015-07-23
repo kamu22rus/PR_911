@@ -58,8 +58,8 @@ public class DB {
     }
 
     // удалить запись из DB_TABLE
-    public void delRec() {
-        mDB.delete(DB_TABLE, null, null);
+    public void delRec(long id) {
+        mDB.delete(DB_TABLE, COLUMN_ID + " = " + id, null);
     }
 
     // класс по созданию и управлению БД
